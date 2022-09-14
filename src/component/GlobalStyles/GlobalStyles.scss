@@ -1,0 +1,32 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+:root{
+    --default-header-height: 120px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    text-rendering: optimizeSpeed;
+}
+body{
+    font-size: 15px;
+    color: #505050;
+    font-family: 'Rubik', sans-serif;
+    vertical-align: baseline;
+    line-height: 26px;
+    font-weight: 400;
+
+}
+button, input,[tabindex]{
+    outline: none;
+    border: none;
+}
+li{
+    list-style: none;
+}
+a[href]{
+    text-decoration: none;
+}
