@@ -179,18 +179,30 @@
 }
 
 .nav-right-menu-toggle {
-    display: none;
+    animation-name: nav_right;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     position: fixed;
     overflow: visible;
     background: #ffffff;
     padding: 30px 50px;
     top: 0;
-    right: 0;
+    // right: 0;
     width: 500px;
     height: 100%;
     z-index: 99;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
+    @keyframes nav_right {
+        from {
+            right: -227px;
+        }
+
+        to {
+            right: 0px;
+        }
+    }
 
 
 }

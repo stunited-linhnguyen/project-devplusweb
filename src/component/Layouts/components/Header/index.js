@@ -12,7 +12,11 @@ import images from '~/assets/images'
 const cx = classNames.bind(Styles)
 
 function Header() {
-    const [navbar, setNavbar] = useState(false)
+    const [navbar, setNavbar] = useState(false);
+    const [show, toggleShow] = useState(false);
+    const [hide, toggleHide] = useState(false);
+
+
 
     const changeNavbar = () => {
         if (window.scrollY >= 150) {
@@ -24,7 +28,14 @@ function Header() {
     }
 
     window.addEventListener('scroll', changeNavbar)
-
+    // const handleMenuToggle = () => {
+    //     const element = document.getElementsByClassName('nav-right-menu-toggle');
+    //     if(element.style.display === 'none'){
+    //         element.style.display = 'block';
+    //     }else{
+    //         element.style.display = 'none';
+    //     }
+    // }
     return (
         <>
             <header className={navbar ? cx('wrapper', 'container') : cx('wrapper')}>
@@ -84,15 +95,18 @@ function Header() {
                             </div>
                         </div>
                     </div>
-                    <div className={cx('col-2', 'right-menu-toggle')}>
-                        <FontAwesomeIcon icon={faBars} className={cx('icon-bar')}></FontAwesomeIcon>
+                    <div className={cx('col-2', 'right-menu-toggle')} onClick={() => toggleShow(!show)}>
+                        <FontAwesomeIcon icon={faBars} className={cx('icon-bar')} ></FontAwesomeIcon>
                     </div>
                 </div>
 
             </header>
+            {show && 
+            
+            
             <div className={cx('nav-right-menu-toggle')}>
                 <div className={cx('close-btn')}>
-                    <div className={cx('background-icon')}>
+                    <div className={cx('background-icon')} onClick={() => toggleShow(!show)}>
                         <FontAwesomeIcon icon={faXmark} className={cx('icon-menu')} />
                     </div>
                 </div>
@@ -108,6 +122,7 @@ function Header() {
                 </div>
                 <div className={cx('map-img')}></div>
             </div>
+            }
         </>
     );
 }
