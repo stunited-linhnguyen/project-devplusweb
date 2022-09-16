@@ -19,7 +19,7 @@ function Header() {
 
 
     const changeNavbar = () => {
-        if (window.scrollY >= 150) {
+        if (window.scrollY >= 120) {
             setNavbar(true)
         }
         else {
@@ -28,14 +28,6 @@ function Header() {
     }
 
     window.addEventListener('scroll', changeNavbar)
-    // const handleMenuToggle = () => {
-    //     const element = document.getElementsByClassName('nav-right-menu-toggle');
-    //     if(element.style.display === 'none'){
-    //         element.style.display = 'block';
-    //     }else{
-    //         element.style.display = 'none';
-    //     }
-    // }
     return (
         <>
             <header className={navbar ? cx('wrapper', 'container') : cx('wrapper')}>

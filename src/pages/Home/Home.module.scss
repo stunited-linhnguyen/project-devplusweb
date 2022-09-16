@@ -1,7 +1,69 @@
 .main-content{
+    width: 100%;
+}
+.banner{
     padding: 125px 0 425px;
     height: 100vh;
     background: url(https://devplus.edu.vn/assets/images/devplus/Devplus_missions.png);
     background-size: cover;
     background-position: center;
+
+}
+// .banner-container {
+//     max-width: 1270px;
+//     width: 100%;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+.banner-content{
+    max-width: 750px;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.banner-title{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 0 0 26px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 16px;
+    
+    
+    // visibility: visible;
+    // animation-duration: 3000ms;
+    // animation-delay: 300ms;
+    // animation-name: fadeInLeft;
+    
+    }
+
+.banner-desc{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 35px;
+
+    // visibility: visible;
+    // animation-duration: 3000ms;
+    // animation-delay: 900ms;
+    // animation-name: fadeInRight;
+}
+.banner-btn{
+    border: 1px solid #ff5421;
+    color: #ffffff;
+    background: #ff5421;
+    padding: 16px 58px;
+    outline: none;
+    border: 1px solid #226FB7;
+    border-radius: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover{
+        background: #ff914d;
+    }     
 }
